@@ -6,14 +6,14 @@ pipeline {
     }
     environment {
         CI = false //do not treat errors as warnings
-        SONARSCANNER = "sonarscanner"
+        SONARSCANNER = "sonar-scanner"
     }
 
     stages {
 
           stage('Run SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonarscanner') {
+                withSonarQubeEnv('sonar-scanner') {
                     script {
                         sh """
                             ${SONARSCANNER} \
