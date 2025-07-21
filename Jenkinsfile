@@ -13,7 +13,7 @@ pipeline {
 
           stage('Run SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonar-scanner') {
+                withSonarQubeEnv('MySonarqube') {
                     script {
                         sh """
                             ${SONARSCANNER} \
