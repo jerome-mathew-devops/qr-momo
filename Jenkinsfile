@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         CI = false //do not treat errors as warnings
-        SONARSCANNER = "sonar-scanner"
+        SONARSCANNER = "sonarscanner"
     }
 
     stages {
