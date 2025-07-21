@@ -13,7 +13,7 @@ pipeline {
 
           stage('Run SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonar-scanner') {
+                withSonarQubeEnv('/opt/sonar-scanner/sonar-scanner-5.0.1.3006-linux/bin') {
                     script {
                         sh """
                             ${SONARSCANNER} \
