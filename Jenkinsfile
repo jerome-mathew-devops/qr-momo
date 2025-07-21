@@ -16,7 +16,7 @@ pipeline {
                 withSonarQubeEnv('sonar-scanner') {
                     script {
                         sh """
-                            /opt/sonar-scanner \
+                            ${SONARSCANNER} \
                             -Dsonar.projectKey=qr-momo \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://localhost:9000 \
