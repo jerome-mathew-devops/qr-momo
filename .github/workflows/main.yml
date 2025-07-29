@@ -1,0 +1,17 @@
+name: Build Docker Image and Push To DockerHub  //Descriptive for our workflow
+  on:
+    push:  //github event trigger
+      branches: [develop]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      -uses: actions/checkout@v4
+      
+      -name: Docker login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
