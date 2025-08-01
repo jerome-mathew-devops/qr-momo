@@ -24,3 +24,12 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/qr-momo:latest
+
+      - name: SonarQube Scan
+        run: |
+          wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip sonar-scanner-cli-*.zip
+          export PATH="$PATH:$(pwd)/sonar-scanner-*/bin"
+          sonar-scanner \
+            -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
+
