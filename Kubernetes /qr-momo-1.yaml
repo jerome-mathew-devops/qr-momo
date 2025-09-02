@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: qr-momo
 spec:
-  replicas: 3
+  replicas: 03
   selector:
     matchLabels:
       app: qr-momo
@@ -13,7 +13,7 @@ spec:
         app: qr-momo
     spec:
       containers:
-      - name: myapp
+      - name: qr-momo
         image: jaymath237/qr-momo:latest
         resources:
           limits:
@@ -21,5 +21,4 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
-
 
