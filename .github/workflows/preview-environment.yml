@@ -8,7 +8,7 @@ on:
       - feature/*
 
 env:
-  IMAGE_REPO: ${{ secret.DOCKER_USERNAME }}/preview-app
+  IMAGE_REPO: ${{ secrets.DOCKER_USERNAME }}/preview-app
   PR_NUM: ${{ github.event.pull_request.number }}
   COMMIT_SHA: ${{ github.sha }}  
   NAMESPACE: preview-pr-${{ github.event.pull_request.number }}
