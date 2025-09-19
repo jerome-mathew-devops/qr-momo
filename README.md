@@ -1,4 +1,4 @@
-# Fully Automated App Preview Environment
+  # Fully Automated App Preview Environment
 
 ## What is a Preview Environment you may ask:
 - A Preview Environment is a temporary, isolated environmenet that gets created automatically whenever a collaborator opens or updates a pull request. Basically it is a mini version of your production environment that exist only for as long as a PR exist.
