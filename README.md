@@ -1,5 +1,28 @@
-# Getting Started with Create React App
+# Fully Automated App Preview Environment
 
+## What is a Preview Environment you may ask:
+- A Preview Environment is a temporary, isolated environmenet that gets created automatically whenever a collaborator opens or updates a pull request. Basically it is a mini version of your production environment that exist only for as long as a PR exist.
+
+## Problems solved by Preview Environments
+- Live feature testing before Merge, that is every PR run in its own isolated environment that QA, developers and other personels can access their application via a generated link and view the application on the go.
+- No Collisions in testing environment, that is each PR gets a seperate namespace/environment, so changes don't interfere with each other.
+- Bugs are caught before merging.
+- Teams can easily decide to approve or menge based on working demo and not just code.
+- Reduces usage of resources as the environment is deleted immedaitely the PR is closed.
+
+WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR AND WATCH AS YOUR APPLICATION COMES LIVE.
+
+
+
+
+
+
+## How does all this happen?
+- A pull request is created my a developer.
+- Pull_request event is triggered on Github actions workflow
+- Docker authenticates with repository, Build docker image and pushes to your specified Image repository
+- Kubenetes pulls this new image, deploys to an isolated namesapce and creates a service which provides you with an accesible application URL link.
+- Upon closure of this 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - Is a QR code generator that allows registered vendors to generate QR codes based on customer purchases allowing customers to pay via MTN Money by scanning the QR code,
 - Built with React, and 
