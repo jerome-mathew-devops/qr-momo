@@ -29,10 +29,10 @@ WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR A
 ## `Key Components`
 
 - Self-Hosted Runner. A self hosted runner was used here as it provides:
-  . Better control over my github work flow as compared to github's hosted runners
-  . Provides eased access to resources on my server as these self hosted runners are installed on your servers
-  . Access to other tools such as Docker, Kubernetes on your server is made easy
-  . Maximised security as the is no 3rd party server such as the github hosted servers handling your workflow
+    - Better control over my github work flow as compared to github's hosted runners
+    - Provides eased access to resources on my server as these self hosted runners are installed on your servers
+    - Access to other tools such as Docker, Kubernetes on your server is made easy
+    - Maximised security as the is no 3rd party server such as the github hosted servers handling your workflow
 -  DockerHub, Stores versioned images for each PR
 -  Kubernetes Manifests files (Depolyment.yaml and service.yaml) with ____IMAGE____ placeholder
 -  Kubeconfig to access kubectl on server
