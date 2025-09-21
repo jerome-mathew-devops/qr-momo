@@ -42,15 +42,21 @@ WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR A
 
 . The preview of your application can be gotten from the command **kubectl port-forward svc/[service_name] [container_portnumber] -n preview-pr-[pr number]**
 
-### `Cleanup`
+## `Cleanup`
 
 . Upon merge or closing of the PR, The created namespace is deleted and code cleaned
 
-### `Lessons learned`
+## `Lessons learned`
 - Discovered the benefits of using self hosted runners as compared to github hosted runners
 - Better version for docker images as to prevent later application errors
 - Use of sed replacements to inject pushed image into deployment manifest files
 - Discovered how to make application testing faster and more cost effective as the entire system lives just life span of the pr
+- Techniques to properly structure a Documentation file
 
-### `Future Improvements`
+  
+## `Future Improvements`
+- ArgoCD intergrated for application health check
+- Helm charts to manage several application deployments
+- Ingress and LoadBalancing for automated application access via internet
+- Intergration with a Monitoring and logging tool such as Prometheus and Grafana 
 
