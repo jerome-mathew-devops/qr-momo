@@ -1,7 +1,7 @@
   # Fully Automated App Preview Environment
 
 ## What is a Preview Environment you may ask:
-- A Preview Environment is a temporary, isolated environmenet that gets created automatically whenever a collaborator opens or updates a pull request. Basically it is a mini version of your production environment that exist only for as long as a PR exist.
+- A Preview Environment is a temporary, isolated environmenet that gets created automatically whenever a collaborator opens or updates a pull request. Basically it is a mini version of your production environment that exist only for as long as a PR exis
 
 ### `Problems solved by the Preview Environments`
 - Live feature testing before Merge, that is every PR run in its own isolated environment that QA, developers and other personels can access their application via a generated link and view the application on the go.
@@ -14,15 +14,15 @@ WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR A
 
 
 
-
-
-
 ### `How does all this happen?`
 - A pull request is created my a developer.
-- Pull_request event is triggered on Github actions workflow
+- Pull_request opened or updated event triggers Github actions workflow
 - Docker authenticates with repository, Build docker image and pushes to your specified Image repository
 - Kubenetes pulls this new image, deploys to an isolated namesapce and creates a service which provides you with an accesible application URL link.
 - Upon closure of ths PR, the namespace is deleted and enviroment cleaned up
+
+
+![Preview Environment](https://github.com/user-attachments/assets/3a91a3d3-dd90-488e-b6dc-b824150fcd9f)
 
 
 
