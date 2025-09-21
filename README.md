@@ -26,7 +26,7 @@ WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR A
 
 
 
-## Key Components
+## `Key Components`
 
 - Self-Hosted Runner. A self hosted runner was used here as it provides:
   . Better control over my github work flow as compared to github's hosted runners
@@ -34,18 +34,13 @@ WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR A
   . Access to other tools such as Docker, Kubernetes on your server is made easy
   . Maximised security as the is no 3rd party server such as the github hosted servers handling your workflow
 -  DockerHub, Stores versioned images for each PR
--  Kubernetes Manifests files (Depolyment.yaml and service.yaml) with __IMAGE__ placeholder
+-  Kubernetes Manifests files (Depolyment.yaml and service.yaml) with ____IMAGE____ placeholder
 -  Kubeconfig to access kubectl on server
 
   
+## `Accessing the Preview Environment`
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+. The preview of your application can be gotten from the command **kubectl port-forward svc/[service_name] [container_portnumber] -n preview-pr-[pr number]**
 
 ### `npm test`
 
