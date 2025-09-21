@@ -22,13 +22,22 @@ WITH THE PREVIEW ENVIRONMENT SYSTEM, ALL YOU NEED TO DO IS OPEN OR UPDATE A PR A
 - Upon closure of ths PR, the namespace is deleted and enviroment cleaned up
 
 
-![Preview Environment](https://github.com/user-attachments/assets/3a91a3d3-dd90-488e-b6dc-b824150fcd9f)
+![Preview Environment 2](https://github.com/user-attachments/assets/14308512-55c5-4200-b6e9-f89380471eda)
 
 
 
-## Available Scripts
+## Key Components
 
-In the project directory, you can run:
+- Self-Hosted Runner. A self hosted runner was used here as it provides:
+  . Better control over my github work flow as compared to github's hosted runners
+  . Provides eased access to resources on my server as these self hosted runners are installed on your servers
+  . Access to other tools such as Docker, Kubernetes on your server is made easy
+  . Maximised security as the is no 3rd party server such as the github hosted servers handling your workflow
+-  DockerHub, Stores versioned images for each PR
+-  Kubernetes Manifests files (Depolyment.yaml and service.yaml) with __IMAGE__ placeholder
+-  Kubeconfig to access kubectl on server
+
+  
 
 ### `npm start`
 
