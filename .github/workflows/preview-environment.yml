@@ -52,9 +52,6 @@ jobs:
           sed "s|__IMAGE__|$IMAGE_REPO:$IMAGE_TAG|g" k8s/deployment.yaml | kubectl apply -n $NAMESPACE -f -
           kubectl apply -n $NAMESPACE -f k8s/service.yaml
 
-           echo "✅ Preview deployed! To access it locally, run:"
-          echo "   minikube service my-service -n $NAMESPACE"
-
 
   cleanup:
     if: github.event.action == 'closed'
